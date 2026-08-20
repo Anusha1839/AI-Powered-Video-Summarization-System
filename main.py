@@ -5,10 +5,13 @@ import shutil
 import os
 
 app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=[
+        "https://elaborate-begonia-4b49b4.netlify.app"
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -49,4 +52,3 @@ async def upload_video(file: UploadFile = File(...)):
     print("Pipeline completed")
 
     return result
-
