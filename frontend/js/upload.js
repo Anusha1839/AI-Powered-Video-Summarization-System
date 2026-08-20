@@ -64,7 +64,7 @@ summarizeBtn.addEventListener(
 
             const response =
             await fetch(
-                "http://127.0.0.1:8000/upload",
+                "https://ai-powered-video-summarization-system.onrender.com/upload",
                 {
                     method: "POST",
                     body: formData
@@ -98,7 +98,7 @@ summarizeBtn.addEventListener(
             ).innerText =
             data.summary.problem;
 
-            document.getElementById(    
+            document.getElementById(
                 "solution"
             ).innerText =
             data.summary.solution;
@@ -175,4 +175,3 @@ summarizeBtn.addEventListener(
 
     }
 );
-
