@@ -5,7 +5,7 @@ def transcribe_audio(audio_path):
     print("Loading model...")
 
     model = WhisperModel(
-        "base",
+        "tiny",
         device="cpu",
         compute_type="int8"
     )
